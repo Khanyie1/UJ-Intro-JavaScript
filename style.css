@@ -22,6 +22,55 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+.fruitValueCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+}
+
+.fruitValue {
+    padding: 10px;
+    border: 1px solid #211c1c0f;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.fruitValue:focus {
+    border-color: #007BFF;   
+}
+
+
+.ButtonFruit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AddFruitBtn {
+    padding: 10px 20px;
+    background-color: rgb(223, 188, 123);
+    color: white; 
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.AddFruitBtn:hover {
+    background-color: #45a049;
+}
+
+.ButtonFruit {
+    padding: 20px 20px;
+}
+
 .fruits li {
     padding: 10px 15px;
     border-bottom: 1px solid #ddd;
@@ -88,5 +137,5 @@ body {
     background-color: #211c1c0f;
     margin-top: 1em;
     padding-top: 1em;
-    height: 221px;
+    height: auto;
 }

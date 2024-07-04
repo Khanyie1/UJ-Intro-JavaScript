@@ -48,18 +48,6 @@ theMessageButton.addEventListener('click', function() {
     }
 });
 
-//Validation of the input
-// theMessageButton.addEventListener('click', function() {
-//     if (inputBox.value.trim().length > 0) {
-//        myMessage.innerText = inputBox.value;
-//     }
-
-//     else
-//     {
-//         alert("Required.");
-//     }
-// });
-
 myMessage.addEventListener('click', function() {
     myMessage.classList.toggle('darkmode')
 })
@@ -77,3 +65,27 @@ for(let i=0; i<fruits.length; i++){
    li.innerText = fruit;
    fruitList.appendChild(li);
 }
+
+
+// Adding the fruit value from user to the array list
+const fruitInput = document.querySelector('.fruitValue');
+const AddFruitBtn = document.querySelector('.AddFruitBtn');
+const FruiltListHTML = document.querySelector('.fruits');
+
+AddFruitBtn.addEventListener('click', function() {
+    const FruitValue = fruitInput.value.trim();
+    
+    if(FruitValue) {
+        fruits.push(FruitValue);
+
+        const li = document.createElement('li');
+        li.innerText = FruitValue;
+        FruiltListHTML.appendChild(li);
+
+        fruitInput.value = '';
+    }
+    else
+    {
+        alert('Add fruit field is empty!');
+    }
+})
